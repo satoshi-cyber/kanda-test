@@ -17,8 +17,10 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "yarn watch:css && react-scripts start",
+    "build": "yarn build:css && react-scripts build",
+    "build:css": "postcss src/assets/css/tailwind.css -o src/assets/css/main.css",
+    "watch:css": "postcss src/assets/css/tailwind.css -o src/assets/css/main.css",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "format": "prettier --write **/*.ts{,x}",
@@ -37,9 +39,9 @@
     ]
   },
   "devDependencies": {
-    "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/eslint-plugin": "^4.27.0",
     "@typescript-eslint/parser": "^4.27.0",
+    "autoprefixer": "^10.2.6",
     "eslint": "^7.28.0",
     "eslint-config-airbnb": "18.2.1",
     "eslint-config-airbnb-typescript": "^12.3.1",
@@ -50,6 +52,9 @@
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^1.7.0",
-    "prettier": "^2.3.1"
+    "postcss": "^8.3.4",
+    "postcss-cli": "^8.3.1",
+    "prettier": "^2.3.1",
+    "tailwindcss": "^2.1.4"
   }
 }
