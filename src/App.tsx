@@ -2,10 +2,10 @@ import React from 'react';
 
 import './assets/css/main.css';
 import './assets/css/style.css';
-import Layout from './components/Layout';
+import Router from './components/Router';
 
 function App() {
-  return <Layout>Layout</Layout>;
+  return <Router />;
 }
 
 export default App;
