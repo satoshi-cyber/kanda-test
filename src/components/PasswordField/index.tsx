@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 
 import Field, { FieldProps } from '../Field';
 import { HideIcon, RevealIcon } from './elements';
@@ -6,9 +6,9 @@ import { HideIcon, RevealIcon } from './elements';
 const PasswordField: React.FC<FieldProps> = ({ ...fieldProps }) => {
   const [reveal, setReveal] = useState(false);
 
-  const handleButtonClick = () => {
+  const handleButtonClick = useCallback(() => {
     setReveal(!reveal);
-  };
+  }, [reveal]);
 
   const button = (
     <button type="button" className="focus:outline-none" onClick={handleButtonClick}>
