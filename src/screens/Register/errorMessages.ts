@@ -1,12 +1,12 @@
 const errorMessages = {
-  firstNameRequired: 'Please Enter your name',
-  lastNameRequired: 'Please Enter your last name',
-  emailRequired: 'Please Enter your email',
+  firstNameRequired: 'Please enter your name',
+  lastNameRequired: 'Please enter your last name',
+  emailRequired: 'Please enter your email',
   emailValidate: 'Email must be valid',
-  passwordRequired: 'Please Enter your password',
+  passwordRequired: 'Please set a password',
   passwordValidate:
     'Password must be at least 8 characters with contains at least one uppercase letter, symbol and number',
-  confirmPasswordRequired: 'Please Enter your again',
+  confirmPasswordRequired: 'Please confirm your password',
   confirmPasswordValidate: 'Passwords must match',
 };
 
