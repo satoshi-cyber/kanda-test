@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 
 import Button from '../../components/Button';
 import Card from '../../components/Card';
@@ -11,9 +11,9 @@ import { ScreenProps, ScreenType } from '../../components/Router/types';
 import useRegisterForm from './useRegisterForm';
 
 const Register: React.FC<ScreenProps> = ({ setScreen }) => {
-  const onSuccees = () => {
+  const onSuccees = useCallback(() => {
     setScreen(ScreenType.TryAgain);
-  };
+  }, [setScreen]);
 
   const { handleSubmit, errors, setValue, pristine, submitting } = useRegisterForm(onSuccees);
 
